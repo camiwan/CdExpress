@@ -1,0 +1,203 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Documentação da API cd_express",
+    "version": "1.0.0",
+    "description": "Documentação da API para o sistema CD Express"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Servidor de desenvolvimento"
+    }
+  ],
+  "paths": {
+    "/empresas": {
+      "get": {
+        "summary": "Obter todas as empresas",
+        "responses": {
+          "200": {
+            "description": "Sucesso ao obter todas as empresas"
+          },
+          "404": {
+            "description": "Empresas não encontradas"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar uma nova empresa",
+        "responses": {
+          "201": {
+            "description": "Sucesso ao criar uma nova empresa"
+          },
+          "400": {
+            "description": "Solicitação inválida"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      }
+    },
+    "/usuarios": {
+      "get": {
+        "summary": "Obter todos os usuários",
+        "responses": {
+          "200": {
+            "description": "Sucesso ao obter todos os usuários"
+          },
+          "404": {
+            "description": "Usuários não encontrados"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar um novo usuário",
+        "responses": {
+          "201": {
+            "description": "Sucesso ao criar um novo usuário"
+          },
+          "400": {
+            "description": "Solicitação inválida"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      }
+    },
+    "/entregadores": {
+      "get": {
+        "summary": "Obter todos os entregadores",
+        "responses": {
+          "200": {
+            "description": "Sucesso ao obter todos os entregadores"
+          },
+          "404": {
+            "description": "Entregadores não encontrados"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar um novo entregador",
+        "responses": {
+          "201": {
+            "description": "Sucesso ao criar um novo entregador"
+          },
+          "400": {
+            "description": "Solicitação inválida"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      }
+    },
+    "/coletas": {
+      "get": {
+        "summary": "Obter todas as coletas",
+        "responses": {
+          "200": {
+            "description": "Sucesso ao obter todas as coletas"
+          },
+          "404": {
+            "description": "Coletas não encontradas"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar uma nova coleta",
+        "responses": {
+          "201": {
+            "description": "Sucesso ao criar uma nova coleta"
+          },
+          "400": {
+            "description": "Solicitação inválida"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      }
+    },
+    "/entregas": {
+      "get": {
+        "summary": "Obter todas as entregas",
+        "responses": {
+          "200": {
+            "description": "Sucesso ao obter todas as entregas"
+          },
+          "404": {
+            "description": "Entregas não encontradas"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar uma nova entrega",
+        "responses": {
+          "201": {
+            "description": "Sucesso ao criar uma nova entrega"
+          },
+          "400": {
+            "description": "Solicitação inválida"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      }
+    },
+    "/coletaEntregadores": {
+      "get": {
+        "summary": "Obter todas as coletas de entregadores",
+        "responses": {
+          "200": {
+            "description": "Sucesso ao obter as coletas de entregadores"
+          },
+          "404": {
+            "description": "Coletas de entregadores não encontradas"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar uma nova coleta de entregadores",
+        "responses": {
+          "201": {
+            "description": "Sucesso ao criar uma nova coleta de entregadores"
+          },
+          "400": {
+            "description": "Solicitação inválida"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+
+

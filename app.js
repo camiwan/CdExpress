@@ -5,6 +5,8 @@ dotenv.config();
 import './backend/src/database';
 import express from 'express';
 
+// import swaggerSpec from './backend/src/config/swaggerConfig';
+
 import tokenRoutes from './backend/src/routes/tokenRoutes';
 
 import homeRoutes from './backend/src/routes/homeRoutes'
@@ -14,19 +16,20 @@ import entregadorRoutes from './backend/src/routes/entregadorRoutes';
 import entregaRoutes from './backend/src/routes/entregaRoutes';
 import coletaRoutes from './backend/src/routes/coletaRoutes';
 import coletaEntregadorRoutes from './backend/src/routes/coletaEntregadorRoutes';
-
-
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from './backend/src/config/swagger.json';
 
 //const helmet = require('helmet');
 
-//import swaggerUi from 'swagger-ui-express';
-//import swaggerDocument from './swagger.json';
+
 
 class App {
   constructor() {
     this.app = express();
     this.middlewares();
     this.routes();
+
+    //this.swaggerSpec;
   }
 
   middlewares() {
@@ -40,7 +43,7 @@ class App {
 
   routes() {
 
-    //this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
     this.app.use('/api/home/', homeRoutes );
     this.app.use('/api/tokens/', tokenRoutes );
@@ -52,6 +55,7 @@ class App {
     this.app.use('/api/coletas-entregadores/', coletaEntregadorRoutes);
 
   }
+
 
 }
 
